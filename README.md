@@ -2,7 +2,7 @@
 
 Tool for ensemble fuzzing, it works across most Linux distributions. So far, Enfuzzer has passed all the testcases and worked well on ubuntu, archlinux, centos, debian, fedora, gentoo and opensuse.
 
-The latest version of enfuzzer was moved to http://wingtecher.com/Enfuzz/  (If you cann't visit it, check your proxy.).
+The latest version of enfuzzer was moved to http://wingtecher.com/Enfuzz/.
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/step1.PNG)
 
@@ -164,7 +164,7 @@ For efficient fuzzing, you can build target application with ASAN or other Sanit
 
 After building target application, you can use EnFuzzer for fuzzing. Before it, you need to create a seed directory for seeds preparation.
 ```sh
-❯ mkdir in & cp ../seed in
+❯ mkdir in & cp -r ../seed in
 ❯ ll
 [*]       app*
 [*]       in/
@@ -180,13 +180,4 @@ EnFuzzer ./app
 
 ![image](https://github.com/131250106/enfuzzer/blob/master/example/image/result.png)
 
-#### AFL customization
-To customize parameters of AFL, add `-afl-mode` at the end of the command:
-
-
-```sh
-EnFuzzer -afl-mode -my-afl-parameters ./app
-```
-
-See [documentation of AFL](http://lcamtuf.coredump.cx/afl/README.txt) for advanced tuning.
 
